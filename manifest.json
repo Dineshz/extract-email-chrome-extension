@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Extract email chrome extension",
+  "version": "0.1",
+  "permissions": [
+    "storage",
+    "background",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["jquery-3.2.1.min.js", "content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "favicon.ico"
+  }
+}
